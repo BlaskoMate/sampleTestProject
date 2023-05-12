@@ -11,6 +11,7 @@ public class TestSelenium {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/opt/google/chrome/google-chrome");
         options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://demo.guru99.com/");
