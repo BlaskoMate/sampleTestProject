@@ -7,8 +7,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class TestSelenium {
     @Test
     public void openDemoPage(){
-        System.setProperty("/webdriver.chrome.driver","/src/test/resources/drivers/chromedriver.exe");
+        System.setProperty("/webdriver.chrome.driver","/usr/local/bin/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
+        options.setBinary("/opt/google/chrome/chrome.exe");
         options.addArguments("--headless");
         ChromeDriver driver = new ChromeDriver(options);
         driver.get("https://demo.guru99.com/");
